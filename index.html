@@ -1,0 +1,102 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+	<title>卓宝，我爱你 </title>  
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url("digital-7_mono.ttf"/*tpa=./digital-7_mono.ttf*/) format("truetype");
+		}
+	</style>
+	<link href="css/default.css" tppabs="./css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js" tppabs="./js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js" tppabs="./js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js" tppabs="./js/functions.js"></script>
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<audio autoplay="autoplay" height="100" width="100">
+				<source src="renxi.mp3" type="audio/mp3" />
+				<embed height="100" width="100" src="renxi.mp3" />
+			</audio>
+			<div id="code">
+				<span class="comments">亲宝：</span><br />
+				<span class="space"/><span class="comments">没有暧昧期的小鹿乱撞，没有阅读时的羞涩胆怯，想必这个“情书”的主题你我都很明晰——一个迟到了85天的“表白”。说来确实不应该，近三个月的时间，真正我直接表白心意只有寥寥几次，让你真正感到感情变为双向也才只有一个月不到，真有点“稀里糊涂在一起”的感觉。现在这样也好，少了以往传统对“开放式结局”的忐忑不安，毕竟我已经是你的“傻宝”了。</span><br />
+				<span class="space"/><span class="comments">平时的我，抖机灵抖得比谁都快，真到感情这块，就发挥出了传统理科男生的特性——嘴笨舌拙，不善言辞。在我的心中，表白就是给“我喜欢你”套几层花样伪装，甜蜜的表达出来。不管怎样，表明心意总是没有错的</span><br />
+				<span class="space"/><span class="comments">说这些话多少有点羞涩油腻，但确实是我心中所想。我真的很想跟你在一起,认认真真谈一场恋爱。你曾说，要做彼此青春的见证者，我也希望不仅于此，我希望无论何时你需要我的时候，我都能出现在你的身边，陪你一直走向正无穷。和你在一起有很多简短却美好的瞬间,我都想定格成永远,这都是我青春里宝贵的记忆。我想成为更好的自己去爱你,为你撑伞,做你的避风港。</span><br />
+				<span class="space"/><span class="comments">最后，就要到了我认为构成表白最重要的一句话了。“苑晓卓，我喜欢你”，七个字，是我认为敲下这一百行代码的动因，也是这一切的源泉。"Everything oringinates from love."是你留在我英语学案上的一句话，当然，也包括这里。没有必要再问你“你愿意吗”，毕竟，最好的宝宝已经跑到我身边了。</span><br />
+				<span class="space"/><span class="comments">苑晓卓，我喜欢你！</span><br />
+
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						卓宝, 这是我们在一起的第
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						永远爱你，一辈子，不分离！<br/>
+						<div class="signature">- 傻宝</div>
+
+				</div>
+			</div>
+</div>
+	<div class="bg1">	
+		<div class="main">
+			<footer style="line-height:20px">
+                <div id="copyright">
+                  <p><a href='http://51bbw.cn' target="_blank"></a> 
+                    <a href="http://ymjzy.net" target="_blank"></a>
+                    <a href="" target="_blank"></a></p>
+
+                </div>
+		</div>
+	</div>
+</div>
+
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2024, 11, 01);
+		together.setHours(22);
+		together.setMinutes(25);
+		together.setSeconds(13);
+		together.setMilliseconds(14);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "提醒您：您的浏览器版本过旧^_^<br/>"+
+				"推荐使用 <a href='http://dlsw.br.baidu.com/ditui/zujian/bdBrowserSetup-5956-ftn_1000061134.exe' target='_blank'>百度浏览器<br/>请先升级您的浏览器，效果很炫哦~~"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				adjustWordsPosition();
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+    <audio id="bgmMusic" src="http://qzone.haoduoge.com/music/C2C3F0LSXH4D771253124A26CF9C71C939B2A.mp3" preload="auto" type="audio/mp3" autoplay loop></audio>
+    
+
+
+</body>
+</html>
